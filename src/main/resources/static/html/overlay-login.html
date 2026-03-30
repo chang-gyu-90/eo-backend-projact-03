@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+</head>
+<body>
+
+    <div id="overlay-login">
+      <div id="overlay-login-box">
+        <button id="overlay-login-close" onclick="hideOverlay('overlay-login')">X</button>
+        <h2>로그인</h2>
+        <input type="text" id="login-userId" placeholder="아이디">
+        <input type="password" id="login-password" placeholder="비밀번호">
+        <button id="login-submit" onclick="login()">로그인</button>
+        <p>
+            계정이 없으신가요?
+            <a href="#" onclick="switchOverlay('overlay-login', 'overlay-signup')">회원가입</a>
+        </p>
+        <p id="login-error"></p>
+      </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+input, textarea, select {
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 100%;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ===== 변수 ===== */
+:root {
+    --color-primary: #c0392b;
+    --color-primary-hover: #a93226;
+    --color-bg: #f5f5f5;
+    --color-white: #ffffff;
+    --color-border: #dddddd;
+    --color-text: #333333;
+    --color-text-light: #888888;
+    --color-error: #e74c3c;
+    --font-size-sm: 12px;
+    --font-size-md: 14px;
+    --font-size-lg: 16px;
+    --border-radius: 4px;
+}
+
+/* ===== 공통 버튼 ===== */
+#login-submit,
+#signup-submit,
+#update-submit,
+#write-submit,
+#comment-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    margin-top: 8px;
+}
+
+#login-submit:hover,
+#signup-submit:hover,
+#update-submit:hover,
+#write-submit:hover,
+#comment-submit:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* ===== 에러 메시지 ===== */
+#login-error,
+#signup-error,
+#update-error,
+#write-error,
+#comment-error {
+    color: var(--color-error);
+    font-size: var(--font-size-sm);
+    margin-top: 4px;
+    min-height: 16px;
+}

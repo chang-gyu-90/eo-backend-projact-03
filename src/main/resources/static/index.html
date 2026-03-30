@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB 가족들의 게시판 - 메인</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/overlay.css">
+    <script src="/js/common.js"></script>
+    <script src="/js/post.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/index.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+    <! 헤더 >
+    <header id="header">
+        <div id="logo">
+            <span id="header-logo">⚾</span>
+            <span>MLB FAMILY COMMUNITY</span>
+        </div>
+
+        <div id="header-right">
+            <div id="auth-buttons">
+                <button onclick="showOverlay('overlay-login')">로그인</button>
+                <button onclick="showOverlay('overlay-signup')">회원가입</button>
+            </div>
+            <div id="user-buttons" style="display:none;">
+                <span id="user-nickname"></span>
+                <button onclick="showOverlay('overlay-mypage')">마이페이지</button>
+                <button onclick="logout()">로그아웃</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section id="hero">
+        <div id="hero-badge">
+            <span>MLB FAMILY COMMUNITY</span>
+        </div>
+        <h1 id="hero-title">MLB 가족들의 게시판</h1>
+        <p id="hero-desc">경기 분석 · 선수 이야기 · 직관 후기 · MLB 클럽 커뮤니티</p>
+
+        <!-- 게시판 탭 -->
+        <nav id="board-nav">
+            <ul id="board-tab-list"></ul>
+        </nav>
+    </section>
+
+    <!-- 메인 컨텐츠 -->
+    <main id="main-content">
+
+        <!-- 실시간 인기글 -->
+        <section id="popular-section">
+            <h4 id="popular-title">실시간 인기글</h4>
+            <ul id="popular-list"></ul>
+        </section>
+
+        <!-- 게시판 -->
+        <section id="board-section">
+            <div id="board-header">
+                <h3 id="board-title">커뮤니티 게시판</h3>
+                <button id="btn-write" onclick="showOverlay('overlay-write')" style="display:none;">+ 글쓰기</button>
+            </div>
+
+            <!-- 카테고리 탭 -->
+            <div id="category-tabs">
+                <ul id="category-tab-list">
+                    <li><button class="active" onclick="filterCategory('전체', this)">전체</button></li>
+                    <li><button onclick="filterCategory('인기', this)">🔥 인기</button></li>
+                    <li><button onclick="filterCategory('경기분석', this)">경기분석</button></li>
+                    <li><button onclick="filterCategory('자유토크', this)">자유토크</button></li>
+                    <li><button onclick="filterCategory('직관후기', this)">직관후기</button></li>
+                    <li><button onclick="filterCategory('포토', this)">포토</button></li>
+                </ul>
+            </div>
+
+            <!-- 게시물 목록 -->
+            <table id="post-table">
+                <thead>
+                <tr>
+                    <th>게시글 종류</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>날짜</th>
+                    <th>조회</th>
+                    <th>추천</th>
+                </tr>
+                </thead>
+                <tbody id="post-list"></tbody>
+            </table>
+
+            <!-- 페이징 -->
+            <div id="pagination"></div>
+        </section>
+
+    </main>
+</div>
+
+<!-- 오버레이 컨테이너 -->
+<div id="overlay-container"></div>
+<div id="overlay-bg" style="display:none;" onclick="hideAllOverlays()"></div>
+
+</body>
+</html>

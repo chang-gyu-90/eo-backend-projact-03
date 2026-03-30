@@ -1,0 +1,378 @@
+/* ===== 오버레이 배경 ===== */
+#overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* ===== 오버레이 공통 ===== */
+#overlay-login,
+#overlay-signup,
+#overlay-mypage,
+#overlay-update,
+#overlay-write,
+#overlay-post {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    z-index: 1000;
+    width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== 오버레이 박스 공통 ===== */
+#overlay-login-box,
+#overlay-signup-box,
+#overlay-mypage-box,
+#overlay-update-box,
+#overlay-write-box,
+#overlay-post-box {
+    position: relative;
+    padding: 40px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ===== 닫기 버튼 ===== */
+#overlay-login-close,
+#overlay-signup-close,
+#overlay-mypage-close,
+#overlay-update-close,
+#overlay-write-close,
+#overlay-post-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    color: var(--color-text-light);
+}
+
+#overlay-login-close:hover,
+#overlay-signup-close:hover,
+#overlay-mypage-close:hover,
+#overlay-update-close:hover,
+#overlay-write-close:hover,
+#overlay-post-close:hover {
+    color: var(--color-primary);
+}
+
+/* ===== 오버레이 h2 공통 ===== */
+#overlay-login-box > h2,
+#overlay-signup-box > h2,
+#overlay-mypage-box > h2,
+#overlay-update-box > h2,
+#overlay-write-box > h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* ===== 제출 버튼 공통 ===== */
+#login-submit,
+#signup-submit,
+#update-submit,
+#write-submit,
+#comment-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+#login-submit:hover,
+#signup-submit:hover,
+#update-submit:hover,
+#write-submit:hover,
+#comment-submit:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* ===== 에러 메시지 공통 ===== */
+#login-error,
+#signup-error,
+#update-error,
+#write-error,
+#comment-error {
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    min-height: 16px;
+}
+
+/* ===== 글쓰기 / 게시글 상세 넓게 ===== */
+#overlay-write,
+#overlay-post {
+    width: 700px;
+}
+
+/* ===== 마이페이지 헤더 ===== */
+#overlay-mypage-box > #mypage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#overlay-mypage-box > #mypage-header > h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+#overlay-mypage-box > #mypage-header > #btn-go-update {
+    padding: 6px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+}
+
+#overlay-mypage-box > #mypage-header > #btn-go-update:hover {
+    background-color: var(--color-bg);
+}
+
+/* ===== 프로필 영역 ===== */
+#overlay-mypage-box > #profile-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius);
+}
+
+#overlay-mypage-box > #profile-area > #profile-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+#overlay-mypage-box > #profile-area > #profile-info > p {
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+    margin-bottom: 2px;
+}
+
+#overlay-mypage-box > #profile-area > #profile-info > p:first-child {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+}
+
+/* ===== 마이페이지 통계 ===== */
+#overlay-mypage-box > #mypage-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+#overlay-mypage-box > #mypage-stats > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+#overlay-mypage-box > #mypage-stats > div > span {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+#overlay-mypage-box > #mypage-stats > div > label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+}
+
+/* ===== 내가 쓴 글 ===== */
+#overlay-mypage-box > #my-posts-section > h3 {
+    font-size: var(--font-size-md);
+    font-weight: bold;
+    color: var(--color-text);
+    padding-left: 8px;
+    border-left: 3px solid var(--color-primary);
+    margin-bottom: 8px;
+}
+
+#overlay-mypage-box > #my-posts-section > #my-posts-list > li {
+    padding: 8px 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#overlay-mypage-box > #my-posts-section > #my-posts-list > li:hover {
+    color: var(--color-primary);
+}
+
+/* ===== 로그아웃 버튼 ===== */
+#overlay-mypage-box > #btn-logout {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-text-light);
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    font-weight: bold;
+}
+
+#overlay-mypage-box > #btn-logout:hover {
+    background-color: var(--color-text);
+}
+
+/* ===== 게시글 상세 ===== */
+#overlay-post-box > #post-detail > #post-detail-header {
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+#overlay-post-box > #post-detail > #post-detail-header > #post-detail-category {
+    display: inline-block;
+    padding: 2px 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 20px;
+    font-size: var(--font-size-sm);
+    margin-bottom: 8px;
+}
+
+#overlay-post-box > #post-detail > #post-detail-header > h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+#overlay-post-box > #post-detail > #post-detail-header > #post-detail-info {
+    display: flex;
+    gap: 12px;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+}
+
+#overlay-post-box > #post-detail > #post-detail-content {
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    line-height: 1.8;
+    min-height: 200px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+    white-space: pre-wrap;
+}
+
+#overlay-post-box > #post-detail > #post-detail-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+#overlay-post-box > #post-detail > #post-detail-buttons > #btn-post-like {
+    padding: 6px 20px;
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+}
+
+#overlay-post-box > #post-detail > #post-detail-buttons > #btn-post-like:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+#overlay-post-box > #post-detail > #post-detail-buttons > #btn-post-update {
+    padding: 6px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+}
+
+#overlay-post-box > #post-detail > #post-detail-buttons > #btn-post-delete {
+    padding: 6px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+}
+
+/* ===== 댓글 섹션 ===== */
+#overlay-post-box > #comment-section {
+    margin-top: 12px;
+}
+
+#overlay-post-box > #comment-section > h3 {
+    font-size: var(--font-size-md);
+    font-weight: bold;
+    color: var(--color-text);
+    padding-left: 8px;
+    border-left: 3px solid var(--color-primary);
+    margin-bottom: 12px;
+}
+
+#overlay-post-box > #comment-section > #comment-list > li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+}
+
+#overlay-post-box > #comment-section > #comment-write {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+/* ===== 내가 쓴 글 목록 ===== */
+#overlay-mypage-box > #my-posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#overlay-mypage-box > #my-posts-list > li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+}
+
+#overlay-mypage-box > #my-posts-list > li:hover {
+    color: var(--color-primary);
+    padding-left: 8px;
+    transition: all 0.2s;
+}

@@ -1,0 +1,341 @@
+:root {
+    --color-primary: #c0392b;
+    --color-primary-hover: #a93226;
+    --color-bg: #f5f5f5;
+    --color-white: #ffffff;
+    --color-border: #e0e0e0;
+    --color-text: #333333;
+    --color-text-light: #888888;
+    --font-size-sm: 12px;
+    --font-size-md: 14px;
+    --font-size-lg: 16px;
+    --font-size-xl: 18px;
+    --border-radius: 4px;
+}
+
+/* ===== wrapper ===== */
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+}
+
+/* ===== header ===== */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+#header > #header-left > #header-logo {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+}
+
+#header > #header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#header > #header-right > #header-count {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+}
+
+#header > #header-right > #auth-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+#header > #header-right > #auth-buttons > button {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    background-color: var(--color-white);
+}
+
+#header > #header-right > #auth-buttons > button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+#header > #header-right > #user-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#header > #header-right > #user-buttons > span {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+#header > #header-right > #user-buttons > button {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+#header > #header-right > #user-buttons > button:hover {
+    background-color: var(--color-bg);
+}
+
+/* ===== hero ===== */
+#hero {
+    text-align: center;
+    padding: 40px 24px 20px;
+    background-color: var(--color-white);
+}
+
+#hero > #hero-badge {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+#hero > #hero-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+#hero > #hero-desc {
+    font-size: var(--font-size-md);
+    color: var(--color-text-light);
+    margin-bottom: 24px;
+}
+
+/* ===== board-nav ===== */
+#board-nav {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 24px;
+}
+
+#board-nav > #board-tab-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#board-nav > #board-tab-list > li > button {
+    padding: 10px 20px;
+    font-size: var(--font-size-md);
+    color: var(--color-text-light);
+    border-bottom: 2px solid transparent;
+    background: none;
+    border-radius: 0;
+}
+
+#board-nav > #board-tab-list > li > button:hover {
+    color: var(--color-primary);
+}
+
+#board-nav > #board-tab-list > li > button.active {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    font-weight: bold;
+}
+
+/* ===== main-content ===== */
+#main-content {
+    padding: 24px;
+}
+
+/* ===== popular-section ===== */
+#popular-section {
+    margin-bottom: 24px;
+}
+
+#popular-section > #popular-title {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 12px;
+    padding-left: 8px;
+    border-left: 3px solid var(--color-primary);
+}
+
+#popular-section > #popular-list {
+    display: flex;
+    gap: 8px;
+}
+
+#popular-section > #popular-list > li {
+    flex: 1;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius);
+    padding: 12px;
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#popular-section > #popular-list > li:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* ===== board-section ===== */
+#board-section {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+#board-section > #board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+#board-section > #board-header > #board-title {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+#board-section > #board-header > #btn-write {
+    padding: 6px 16px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+}
+
+#board-section > #board-header > #btn-write:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* ===== category-tabs ===== */
+#board-section > #category-tabs {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+#board-section > #category-tabs > #category-tab-list {
+    display: flex;
+    gap: 8px;
+}
+
+#board-section > #category-tabs > #category-tab-list > li > button {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-white);
+}
+
+#board-section > #category-tabs > #category-tab-list > li > button:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#board-section > #category-tabs > #category-tab-list > li > button.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* ===== post-table ===== */
+#post-table {
+    width: 100%;
+}
+
+#post-table > thead > tr > th {
+    padding: 12px 8px;
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border-bottom: 2px solid var(--color-border);
+    text-align: center;
+}
+
+#post-table > tbody > tr {
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+}
+
+#post-table > tbody > tr:hover {
+    background-color: var(--color-bg);
+}
+
+#post-table > tbody > tr > td {
+    padding: 12px 8px;
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    text-align: center;
+}
+
+#post-table > tbody > tr > td:nth-child(2) {
+    text-align: left;
+}
+
+/* ===== pagination ===== */
+#pagination {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 16px;
+}
+
+#pagination > button {
+    padding: 6px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+#pagination > button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+#pagination > button.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* ===== footer ===== */
+#footer {
+    background-color: var(--color-bg);
+    padding: 20px 24px;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    border-top: 1px solid var(--color-border);
+}
+
+#footer > p {
+    margin: 4px 0;
+}

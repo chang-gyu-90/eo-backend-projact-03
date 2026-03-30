@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기</title>
+</head>
+<body>
+
+    <div id="overlay-write">
+        <div id="overlay-write-box">
+            <button id="overlay-write-close" onclick="hideOverlay('overlay-write')">✕</button>
+            <h2>글쓰기</h2>
+            <select id="write-category">
+                <option value="경기분석">경기분석</option>
+                <option value="자유토크">자유토크</option>
+                <option value="직관후기">직관후기</option>
+                <option value="포토">포토</option>
+            </select>
+            <input type="text" id="write-title" placeholder="제목">
+            <textarea id="write-content" placeholder="내용" rows="10"></textarea>
+            <button id="write-submit" onclick="writePost()">게시글 등록</button>
+            <p id="write-error"></p>
+        </div>
+    </div>
+
+</body>
+</html>

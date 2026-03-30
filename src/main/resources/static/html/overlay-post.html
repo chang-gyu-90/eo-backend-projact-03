@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 상세</title>
+</head>
+<body>
+
+    <div id="overlay-post">
+      <div id="overlay-post-box">
+        <button id="overlay-post-close" onclick="hideOverlay('overlay-post')">✕</button>
+
+        <!-- 게시글 상세 -->
+        <div id="post-detail">
+          <div id="post-detail-header">
+            <div id="post-detail-category"></div>
+            <h2 id="post-detail-title"></h2>
+            <div id="post-detail-info">
+              <span id="post-detail-nickname"></span>
+              <span id="post-detail-date"></span>
+              <span id="post-detail-views"></span>
+              <span id="post-detail-likes"></span>
+            </div>
+          </div>
+          <div id="post-detail-content"></div>
+          <div id="post-detail-buttons">
+            <button id="btn-post-update" onclick="showPostUpdate()" style="display:none;">수정</button>
+            <button id="btn-post-delete" onclick="deletePost()" style="display:none;">삭제</button>
+          </div>
+        </div>
+
+        <!-- 댓글 섹션 -->
+        <div id="comment-section">
+          <h3>댓글</h3>
+          <ul id="comment-list"></ul>
+          <div id="comment-write" style="display:none;">
+            <textarea id="comment-content" placeholder="댓글을 입력하세요" rows="3"></textarea>
+            <button id="comment-submit" onclick="writeComment()">등록</button>
+            <p id="comment-error"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

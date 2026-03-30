@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마이페이지</title>
+</head>
+<body>
+<div id="overlay-mypage">
+  <div id="overlay-mypage-box">
+    <button id="overlay-mypage-close" onclick="hideOverlay('overlay-mypage')">✕</button>
+
+    <!-- 헤더 -->
+    <div id="mypage-header">
+      <h2>마이 페이지</h2>
+      <button id="btn-go-update" onclick="switchOverlay('overlay-mypage', 'overlay-update')">정보수정</button>
+    </div>
+
+    <!-- 프로필 -->
+    <div id="profile-area">
+      <div id="profile-avatar"></div>
+      <div id="profile-info">
+        <p id="profile-nickname"></p>
+        <p id="profile-userId"></p>
+        <p id="profile-joinDate"></p>
+      </div>
+    </div>
+
+    <!-- 내가 쓴 글 타이틀 -->
+    <div id="my-posts-section">
+      <h3>내가 쓴 글</h3>
+    </div>
+
+    <!-- 통계 -->
+    <div id="mypage-stats">
+      <div id="stat-posts">
+        <span></span>
+        <label>작성글</label>
+      </div>
+      <div id="stat-comments">
+        <span></span>
+        <label>댓글수</label>
+      </div>
+    </div>
+
+    <!-- 게시글 목록 -->
+    <ul id="my-posts-list"></ul>
+
+    <button id="btn-logout" onclick="logout()">로그아웃</button>
+  </div>
+</div>
+</body>
+</html>

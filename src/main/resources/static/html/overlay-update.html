@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>정보 수정</title>
+</head>
+<body>
+<div id="overlay-update">
+    <div id="overlay-update-box">
+        <button id="overlay-update-close" onclick="hideOverlay('overlay-update')">✕</button>
+        <h2>정보 수정</h2>
+
+        <!-- 닉네임 수정 -->
+        <div style="border:1px solid #ddd; border-radius:8px; padding:16px; margin-bottom:16px;">
+            <h4 style="margin-bottom:12px;">닉네임 수정</h4>
+            <input type="text" id="update-nickname" placeholder="새 닉네임">
+            <button id="update-nickname-submit" onclick="updateNickname()" style="width:100%; margin-top:8px; padding:10px; background:#c0392b; color:white; border-radius:4px; font-size:14px;">닉네임 변경</button>
+            <p id="update-nickname-error" style="margin-top:4px; font-size:12px;"></p>
+        </div>
+
+        <!-- 비밀번호 수정 -->
+        <div style="border:1px solid #ddd; border-radius:8px; padding:16px;">
+            <h4 style="margin-bottom:12px;">비밀번호 수정</h4>
+            <input type="password" id="update-currentPassword" placeholder="기존 비밀번호">
+            <input type="password" id="update-newPassword" placeholder="새 비밀번호" style="margin-top:8px;">
+            <input type="password" id="update-newPasswordConfirm" placeholder="새 비밀번호 확인" style="margin-top:8px;">
+            <button id="update-password-submit" onclick="updatePassword()" style="width:100%; margin-top:8px; padding:10px; background:#c0392b; color:white; border-radius:4px; font-size:14px;">비밀번호 변경</button>
+            <p id="update-error" style="margin-top:4px; font-size:12px;"></p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
